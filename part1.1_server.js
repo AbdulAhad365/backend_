@@ -1,9 +1,11 @@
 const http=require('http');
 const fs=require('fs');
+const _=require('lodash')
 // CREATE THE SERVER
 const server=http.createServer((req,res)=>{
     console.log('request is recieved');
     console.log(req.url,req.method);
+    console.log(_.random(0,20));
 
     // now the response
     // res.setHeader('Content-Type','text/html')
@@ -50,7 +52,7 @@ const server=http.createServer((req,res)=>{
 
 });
 // LISTEN THE SERVER
-server.listen(4000
+server.listen(4001
     ,'localhost',()=>{
     console.log('listing the request at the port number 6021');
 });
